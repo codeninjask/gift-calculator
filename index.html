@@ -3,83 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dowry Calculator Tool</title>
+    <title>Dowry Calculator: Awareness Tool</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Dowry Calculator</h1>
-
+    <div class="form-container">
+        <div class="form-header">
+            <h1>Dowry Calculator</h1>
+            <p>This tool estimates 'Gifts'  <span class="required">*</span> Required</p>
+        </div>
         <form id="dowryForm" onsubmit="calculateDowry(event)">
-            <div class="form-group">
-                <label for="profession">Groom's Profession</label>
+            <div class="form-section">
+                <label for="profession">Groom's Profession <span class="required">*</span></label>
                 <select id="profession" required>
-                    <option value="" disabled selected>Select profession</option>
+                    <option value="" disabled selected>Choose</option>
                     <option value="high_status">High-status (e.g., Doctor, Engineer)</option>
                     <option value="mid_tier">Mid-tier (e.g., Teacher, Clerk)</option>
                     <option value="low_tier">Low-tier (e.g., Farmer, Daily Wage)</option>
                 </select>
             </div>
 
-            <div class="form-group">
-                <label for="education">Groom's Education</label>
+            <div class="form-section">
+                <label for="education">Groom's Education <span class="required">*</span></label>
                 <select id="education" required>
-                    <option value="" disabled selected>Select education</option>
+                    <option value="" disabled selected>Choose</option>
                     <option value="advanced">Advanced Degree (e.g., MBBS, PhD)</option>
                     <option value="bachelor">Bachelor’s Degree</option>
                     <option value="high_school">High School or Less</option>
                 </select>
             </div>
 
-            <div class="form-group">
-                <label for="family_status">Family Status</label>
+            <div class="form-section">
+                <label for="family_status">Family Status <span class="required">*</span></label>
                 <select id="family_status" required>
-                    <option value="" disabled selected>Select family status</option>
+                    <option value="" disabled selected>Choose</option>
                     <option value="affluent">Affluent/Politically Connected</option>
                     <option value="middle_class">Middle-class</option>
-                    <option value="lower_income">Lower-income</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="region">Region</label>
-                <select id="region" required>
-                    <option value="" disabled selected>Select region</option>
-                    <option value="urban">Urban (e.g., Pune, Ahmedabad)</option>
-                    <option value="rural">Rural (e.g., Pilibhit)</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="cash">Cash Demand (₹)</label>
-                <input type="number" id="cash" min="0" placeholder="e.g., 500000" required>
-            </div>
-
-            <div class="form-group">
-                <label for="vehicle">Vehicle Demand</label>
-                <select id="vehicle" required>
-                    <option value="" disabled selected>Select vehicle</option>
-                    <option value="none">None</option>
-                    <option value="mid_range_car">Mid-range Car (e.g., Nissan)</option>
-                    <option value="luxury_car">Luxury Car</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="gold">Gold Demand (grams)</label>
-                <input type="number" id="gold" min="0" placeholder="e.g., 10" required>
-            </div>
-
-            <div class="form-group">
-                <label for="items">Household Items (number)</label>
-                <input type="number" id="items" min="0" placeholder="e.g., 2" required>
-            </div>
-
-            <button type="submit">Calculate Dowry</button>
-        </form>
-
-        <div id="result" class="result"></div>
-
-        <div class="awareness">
-            <p
+                    <option value
