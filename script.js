@@ -21,8 +21,9 @@ function calculateDowry(event) {
     const items = parseFloat(document.getElementById('items').value) || 0;
 
     // Validate inputs
+    const resultDiv = document.getElementById('result');
     if (!profession || !education || !family_status || !region || !vehicle) {
-        document.getElementById('result').innerHTML = 'Please fill all fields.';
+        resultDiv.innerHTML = 'Please fill all required fields.';
         return;
     }
 
@@ -39,7 +40,6 @@ function calculateDowry(event) {
                    (items * 50000); // Rs 50,000 per item
 
     // Display result
-    const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = `Estimated Dowry: ₹${dowry.toLocaleString('en-IN')}<br><br>
         <strong>Warning:</strong> Dowry is illegal under the Dowry Prohibition Act, 1961, with penalties up to 2 years imprisonment and fines. This tool is for awareness only.`;
 }
