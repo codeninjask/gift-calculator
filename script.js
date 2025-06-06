@@ -41,5 +41,5 @@ function calculateDowry(event) {
 
     // Display result
     resultDiv.innerHTML = `Estimated Dowry: ₹${dowry.toLocaleString('en-IN')}<br><br>
-        <strong>Warning:</strong> Dowry is illegal under the Dowry Prohibition Act, 1961, with penalties up to 2 years imprisonment and fines. This tool is for awareness only.`;
+        <strong>Warning:</strong> Padhai kr le, Ye sab dekhne se ghar nhi chalta.`;
 }
