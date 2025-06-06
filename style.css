@@ -1,78 +1,125 @@
-body {
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
     padding: 20px;
-    background-color: #f4f4f4;
+    line-height: 1.6;
 }
 
 .container {
     max-width: 600px;
     margin: 0 auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background: #252525;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #00bcd4;
+    margin-bottom: 20px;
+    font-size: 2rem;
 }
 
-p {
-    color: #555;
+.intro {
+    font-size: 1rem;
+    color: #b0b0b0;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.intro strong {
+    color: #ff5252;
+}
+
+.form-group {
+    margin-bottom: 20px;
 }
 
 label {
-    font-weight: bold;
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #e0e0e0;
 }
 
 select, input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background: #333;
+    color: #e0e0e0;
+    transition: border-color 0.3s ease;
+}
+
+select:focus, input:focus {
+    outline: none;
+    border-color: #00bcd4;
 }
 
 button {
-    padding: 10px;
-    background-color: #d32f2f;
-    color: white;
+    width: 100%;
+    padding: 14px;
+    background: #00bcd4;
+    color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
     cursor: pointer;
-    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #b71c1c;
+    background: #008ba3;
+    transform: translateY(-2px);
 }
 
 .result {
     margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #d32f2f;
+    padding: 15px;
+    background: #333;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: #ff5252;
+    text-align: center;
 }
 
 .awareness {
-    margin-top: 20px;
-    font-style: italic;
-    color: #333;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    text-align: center;
+}
+
+.awareness a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.awareness a:hover {
+    text-decoration: underline;
 }
 
 /* Responsive design */
 @media (max-width: 500px) {
     .container {
-        padding: 10px;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.5rem;
     }
     select, input, button {
-        font-size: 14px;
+        font-size: 0.9rem;
+        padding: 10px;
     }
 }
