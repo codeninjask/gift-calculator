@@ -34,6 +34,6 @@ function calculateDowry(event) {
 
     // Display result
     const resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = `Estimated Dowry: Rs ${dowry.toLocaleString('en-IN')}<br><br>
+    resultDiv.innerHTML = `Kyuu nhi ho rhi he padhai? 😜 Focus on education, not dowry! Rs ${dowry.toLocaleString('en-IN')}<br><br>
         <strong>Warning:</strong> Dowry is illegal under the Dowry Prohibition Act, 1961, with penalties up to 2 years imprisonment and fines. This tool is for awareness only.`;
 }
