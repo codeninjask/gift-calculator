@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dowry Calculator Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dowry Calculator</h1>
+        <p>This tool estimates 'Gift' demands to highlight their scale. Dowry is prohibited under the Dowry Prohibition Act, 1961, and can lead to imprisonment and fines.</p>
+        
+        <form id="dowryForm" onsubmit="calculateDowry(event)">
+            <label for="profession">Groom's Profession:</label>
+            <select id="profession" required>
+                <option value="high_status">High-status (e.g., Doctor, Engineer)</option>
+                <option value="mid_tier">Mid-tier (e.g., Teacher, Clerk)</option>
+                <option value="low_tier">Low-tier (e.g., Farmer, Daily Wage)</option>
+            </select>
+
+            <label for="education">Groom's Education:</label>
+            <select id="education" required>
+                <option value="advanced">Advanced Degree (e.g., MBBS, PhD)</option>
+                <option value="bachelor">Bachelor’s Degree</option>
+                <option value="high_school">High School or Less</option>
+            </select>
+
+            <label for="family_status">Family Status:</label>
+            <select id="family_status" required>
+                <option value="affluent">Affluent/Politically Connected</option>
+                <option value="middle_class">Middle-class</option>
+                <option value="lower_income">Lower-income</option>
+            </select>
+
+            <label for="region">Region:</label>
+            <select id="region" required>
+                <option value="urban">Urban (e.g., Pune, Ahmedabad)</option>
+                <option value="rural">Rural (e.g., Pilibhit)</option>
+            </select>
+
+            <label for="cash">Cash Demand (Rs):</label>
+            <input type="number" id="cash" min="0" placeholder="e.g., 500000" required>
+
+            <label for="vehicle">Vehicle Demand:</label>
+            <select id="vehicle" required>
+                <option value="none">None</option>
+                <option value="mid_range_car">Mid-range Car (e.g., Nissan)</option>
+                <option value="luxury_car">Luxury Car</option>
+            </select>
+
+            <label for="gold">Gold Demand (grams):</label>
+            <input type="number" id="gold" min="0" placeholder="e.g., 10" required>
+
+            <label for="items">Household Items (number):</label>
+            <input type="number" id="items" min="0" placeholder="e.g., 2" required>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div id="result" class="result"></div>
+
+        <p class="awareness">Khude ke risk pr dekh lena</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
